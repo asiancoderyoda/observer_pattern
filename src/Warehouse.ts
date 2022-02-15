@@ -44,7 +44,7 @@ export class Warehouse implements Observable {
         return;
     }
 
-    detatch(customer: Observer): void {
+    detach(customer: Observer): void {
         const index = this._isRegularCustomer(customer) ? this._regularCustomers.indexOf(customer) 
         : 
         this._isCorporateCustomer(customer) ? this._corporateCustomers.indexOf(customer) 
@@ -70,13 +70,13 @@ export class Warehouse implements Observable {
         switch(eventType) {
             case EventType.Regular: 
                 this._regularCustomers.forEach(el => {
-                    el.update(info);
+                    el.showUpdate(info);
                 })
                 break;
 
             case EventType.Corporate:
                 this._corporateCustomers.forEach(el => {
-                    el.update(info)
+                    el.showUpdate(info)
                 })
                 break;
             default:

@@ -1,0 +1,1 @@
+The Observer Pattern is an appropriate design pattern to apply in any situation where you have several objects which are dependent on another object and are required to perform an action when the state of that object changes, or an object needs to notify others without knowing who they are or how many there are.
